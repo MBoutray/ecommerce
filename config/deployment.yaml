@@ -7,8 +7,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
-    targetPort: 8080
+    - port: 8080
+      targetPort: 8080
   selector:
     app: iphoneshop
 ---
@@ -38,8 +38,8 @@ spec:
   selector:
     app: iphoneshop
   ports:
-  - port: 8080
-    targetPort: 8080
+    - port: 8080
+      targetPort: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -55,8 +55,8 @@ spec:
         app: iphoneshop
     spec:
       containers:
-      - name: iphoneshop
-        image: gcr.io/driven-country-330314/iphoneshop:v1
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
+        - name: iphoneshop
+          image: gcr.io/driven-country-330314/iphoneshop:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

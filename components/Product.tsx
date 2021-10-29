@@ -27,12 +27,12 @@ const Product = (props: IProductProps) => {
                     ${props.product.price.toFixed(2)}
                 </div>
                 <button
-                    className={`snipcart-add-item ${styles.product__button}`}
-                    data-item-id={props.product.id}
-                    data-item-name={props.product.name}
-                    data-item-price={props.product.price}
-                    data-item-image={props.product.image.src}
-                    data-item-url={props.product.url}
+                className={`snipcart-add-item ${styles.product__button}`}
+                data-item-id={props.product.id}
+                data-item-name={props.product.name}
+                data-item-price={props.product.price}
+                data-item-image={props.product.image.src}
+                data-item-url={props.product.url}
                 >Add to cart</button>
             </div>
         </div>

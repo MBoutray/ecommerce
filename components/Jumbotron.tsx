@@ -1,5 +1,4 @@
 import Image from "next/image"
-import styles from "../styles/Jumbotron.module.scss"
 import iphone from "../public/iphone.png"
 
 // arrow function
@@ -7,10 +6,10 @@ import iphone from "../public/iphone.png"
 const Jumbotron = () => {
     return (
         <div>
-            <div className={styles.backgroundimage}>
+            <div className="background-image">
                 <Image src={iphone} alt="iphone" />
             </div>
-            <div className={styles.promotionalmessage}>
+            <div className="promotional-message">
                 <h3>SHOP</h3>
                 <h2>iPhone</h2>
                 <p>

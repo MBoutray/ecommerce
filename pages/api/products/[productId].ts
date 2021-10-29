@@ -1,6 +1,6 @@
-import {NextApiRequest, NextApiResponse} from "next";
-import {products} from "../../index";
-import {IProduct} from "../../../components/Product";
+import {NextApiRequest, NextApiResponse} from "next"
+import {products} from "../../index"
+import {IProduct} from "../../../components/Product"
 
 export interface ISnipcartProduct {
     id: string
@@ -11,7 +11,7 @@ export interface ISnipcartProduct {
     image: string
 }
 
-export default function handler(req: NextApiResponse, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const {productId} = req.query;
     const product: IProduct | undefined = products.find(p => p.id === productId);
     if (!product) {
@@ -19,7 +19,7 @@ export default function handler(req: NextApiResponse, res: NextApiResponse) {
         return ;
     }
 
-    const snipcartProduct: ISnipcartProduct = {...product, image: product?.image.src ?? ""};
-
+    const snipcartProduct: ISnipcartProduct = {...product, image: product?.image.src ?? ""}
+    
     res.status(200).json(snipcartProduct);
 }

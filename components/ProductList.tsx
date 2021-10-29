@@ -1,6 +1,4 @@
-import { getStaticProps } from "../pages"
 import Product, {IProduct} from "./Product"
-import styles from "../styles/ProductList.module.scss"
 
 interface IproductListProps {
     products: IProduct[]

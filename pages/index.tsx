@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from "next/head"
 import Contact from "../components/Contact"
 import Jumbotron from '../components/Jumbotron'
-import Script from 'next/script';
+import Script from 'next/script'
 import ProductList from "../components/ProductList"
 import {IProduct} from "../components/Product"
 import {GetStaticProps} from "next"
@@ -62,7 +62,7 @@ export const products: IProduct[] = [
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
-    props: {
+    props: {     
       products
     }
   }
